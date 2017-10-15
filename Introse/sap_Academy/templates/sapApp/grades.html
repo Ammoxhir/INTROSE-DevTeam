@@ -1,0 +1,100 @@
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'sapApp/grades.css' %}">
+        <title>Grading Assessment</title>
+    </head>
+    <body>
+        <div class="webpage">
+            <div class="header">
+                <div class="header-bar1">
+                    <div class="item-container">
+                        <div class="bar-photo">
+                            <a href="/"><img src = "{% static 'sapApp/Images/saplogo.png' %}" width=65 height=32></a>
+                        </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/students/"><span class="item">STUDENTS</span></a>
+                        </div>
+                            </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/grades/"><span class="item">GRADES</span></a>
+                        </div>
+                        </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/reports/"><span class="item">REPORTS</span></a>
+                        </div>
+                    </div>
+                        
+                    </div>
+                    <div class="item-container3">
+                        <div class="bar-item2">
+                            <span class="greetings">Hi, Lyn Reyes!</span>
+                        </div>
+                        <div class="bar-photo">
+                            <img src = "usericon.png" width=32 height=28>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="header2-bar2">
+                    <div class="item-container2">
+                    <div class="bar-title">
+                        <span class ="bigtext">Grading Assessment</span>
+                    </div>
+                    <div class="search-container">
+                        <input type="text" class="search" placeholder="Search">
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                
+                    <div class="table-container">
+                    <div class="top-color">.</div>
+                    <table>
+                            <th>Name</th>
+                            <th>SAP ID #</th>
+                            <th>Group #</th>
+                            <th>Territory</th>
+                            <th>Country</th>
+                            <th>Training Program</th>
+                        <tr>
+                            
+                            <td><a href="/sapApp/grades2/">Doe, John</a></td>
+                            <td>123</td>
+                            <td>1</td>
+                            <td>APJ</td>
+                            <td>Philippines</td>
+                            <td>Pipeline Generation</td>
+
+                        </tr>
+                        <tr>
+                            <td><a href="/sapApp/grades2/">Dela Cruz, Juan</a></td>
+                            <td>124</td>
+                            <td>2</td>
+                            <td>APJ</td>
+                            <td>Singapore</td>
+                            <td>Pipeline Generation</td>
+
+                        </tr>
+                        <tr>
+                            <td><a href="/sapApp/grades2/">Khaled, DJ</a></td>
+                            <td>125</td>
+                            <td>3</td>
+                            <td>APJ</td>
+                            <td>Philippines</td>
+                            <td>Pipeline Generation</td>
+
+                        </tr>
+                    </table>
+                </div>
+                
+                
+            </div>
+        </div>
+    </body>
+</html>

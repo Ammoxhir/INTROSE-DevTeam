@@ -1,0 +1,151 @@
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'sapApp/dashboard.css' %}">
+        <title>My Dashboard</title>
+    </head>
+    <body onload="off()">
+        
+		<div id="overlay">
+			<div class="item-container4">
+				<div id="note"> Add a Note </div>
+				<div id="close" onclick="off()"> X </div>
+				<div id="item-container5">
+					<div id="title"> <input type="text" placeholder="Title" id="note_title"> </div>
+					<div id="content">
+						<textarea id="note_content" rows="4" cols="50"> </textarea>
+					</div>
+				</div>
+				<input type="date" id="note_date"> 
+				<button id="addnote"> Add a Note </button>
+			</div>
+		</div>
+		
+		<div id="event_overlay">
+			<div class="item-container4">
+				<div id="note"> Add a Calendar Event </div>
+				<div id="close" onclick="off()"> X </div>
+				<div id="item-container6">
+					<div id="name"> Event Name: <input type="text" id="event_title"> </div>
+					<div id="date"> Date: <input type="date" id="event_date"> </div>
+					<div id="time"> Time: <input type="time" id="event_time"> </div>
+					<div id="color"> Color: <input type="color" id="event_color"> </div>
+					<div id="content"> Notes:
+						<textarea id="event_notes" rows="2" cols="8"> </textarea>
+					</div>
+				</div>
+				<button id="addevent"> Add an Event </button>
+			</div>
+		</div>
+		
+        <div class="webpage">
+            <div class="header">
+                <div class="header-bar1">
+                    <div class="item-container">
+                        <div class="bar-photo">
+                            <a href="/"><img src="{% static 'sapApp/Images/saplogo.png' %}" width=65 height=32></a>
+                        </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/students/"><span class="item">STUDENTS</span></a>
+                        </div>
+                            </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/grades/"><span class="item">GRADES</span></a>
+                        </div>
+                        </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/reports/"><span class="item">REPORTS</span></a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="item-container3">
+                        {% if request.session.user > 0 %}
+                        <div class="item-container3">
+                            <span class="greetings">Hi, Lyn Reyes!</span>
+                        </div>
+                        <div class="bar-photo">
+                            <img src = "usericon.png" width=32 height=28 onclick="viewMenu()" id="dropdown">
+                        </div>
+                        
+                        {% else %}
+                        <div class="item-container3">
+                            <a href="/signup/"><span class="item">LOGIN</span></a>
+                        </div>
+                        
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="header2-bar2">
+                    <div class="item-container2">
+                    <div class="bar-title">
+                        <span class ="bigtext">MY DASHBOARD</span>
+						<a href="uploadfile.html"><span class="smalltext"> Upload a File </span></a>
+						<span class="smalltext" onclick="addEvent()"> Add Calendar Event </span>
+						<span class="smalltext" onclick="addNote()"> Add Notes </span>						
+                    </div>
+                    <div class="search-container">
+                        <input type="text" class="search" placeholder="Search">
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="post-container">
+                    <div class="post">
+                        <div class="top-color">.</div>
+                        <span class="title">Meeting Notes</span>
+                        <span class="body">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                        <span class="time">Last edit: Tuesday</span>
+                    </div>
+                    <div class="post">
+                        <div class="top-color">.</div>
+                        <span class="title">Meeting Notes</span>
+                        <span class="body">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                        <span class="time">Last edit: Tuesday</span>
+                    </div>
+                    <div class="post">
+                        <div class="top-color">.</div>
+                        <span class="title">Faculty Assessment</span>
+                        <span class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                        <span class="time">Last edit: Tuesday</span>
+                    </div>
+                </div>
+                <div class="side-container">
+                <div class="top-color2">.</div>
+                <div class="calendar">
+                    <span class="calendar-title">Calendar</span>
+                    <img src="{% static 'sapApp/Images/calendar.jpg' %}" width=400 style="margin-left: 1.7em; margin-top: 1em;">
+                    <div class="todo">
+                        <span class="todo-title">To-do List</span>
+                        
+                        <span class="todo-row"><input type="checkbox">Meeting at 9am</span>
+                        <span class="todo-row"><input type="checkbox">Grades due at 12nn</span>
+                        <span class="todo-row"><input type="checkbox">Meeting at 3pm</span>
+                        <span class="todo-row"><input type="checkbox">Meeting at 4pm</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+        </div>
+		
+		<script>
+			function addNote(){
+				document.getElementById("overlay").style.display = "block";
+			}
+			function addEvent(){
+				document.getElementById("event_overlay").style.display = "block";
+			}
+			function off(){
+				document.getElementById("overlay").style.display = "none";
+				document.getElementById("event_overlay").style.display = "none";
+			
+			}
+		</script>
+    </body>
+</html>

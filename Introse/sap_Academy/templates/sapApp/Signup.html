@@ -1,0 +1,71 @@
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'sapApp/Signup.css' %}">
+        <title>Sign Up</title>
+    </head>
+    <body>
+        <div class="webpage">
+            <div class="header">
+                <div class="header-bar1">
+                    <div class="item-container">
+                        <div class="bar-photo">
+                            <a href="/"><img src = "{% static 'sapApp/Images/saplogo.png' %}" width=65 height=32></a>
+                        </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/students/"><span class="item">STUDENTS</span></a>
+                        </div>
+                            </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/students/"><span class="item">GRADES</span></a>
+                        </div>
+                        </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/students/"><span class="item">REPORTS</span></a>
+                        </div>
+                    </div>
+                        
+                    </div>
+                    <div class="item-container3">
+                        <div class="bar-item2">
+                            <span class="greetings">Hi there!</span>
+                        </div>
+                        <div class="bar-photo">
+                            <img src = "usericon.png" width=32 height=28>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="header2-bar2">
+                    <div class="item-container2">
+                    <div class="bar-title">
+                        <span class ="bigtext">Sign Up</span>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                
+                <div class="table-container">
+                    <div class="top-color">.</div>
+                        <div class="head"> Create A User </div>
+                        <form role="form" method="post">
+                            {% csrf_token %}
+                                <div class="head2">First Name</div><input type="text" name="first_name" id="first_name"  class="input">
+                                <div class="head3">Last Name</div><input type="text" name="last_name" id="last_name" class="input2">
+                                <div class="head3">Position</div><input type="text" name="work_position" id="work_position" class="input2">
+                                <div class="head3">Employee #</div><input type="text" name="employee_num" id="employee_num" class="input2">
+                                <div class="head3">Password</div><input type="text" name="password1" id="password1" class="input2">
+                                <div class="head3">Confirm Pass.</div><input type="text" name="password2" id="password2" class="input2"><br>
+                                <button type="submit" class="button1"> Submit</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'sapApp/reports.css' %}">
+        <title>Analytical Reports</title>
+    </head>
+    <body>
+        <div class="webpage">
+            <div class="header">
+                <div class="header-bar1">
+                    <div class="item-container">
+                        <div class="bar-photo">
+                            <a href="/"><img src = "{% static 'sapApp/Images/saplogo.png' %}" width=65 height=32></a>
+                        </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/students/"><span class="item">STUDENTS</span></a>
+                        </div>
+                            </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/grades/"><span class="item">GRADES</span></a>
+                        </div>
+                        </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/reports/"><span class="item">REPORTS</span></a>
+                        </div>
+                    </div>
+                        
+                    </div>
+                    <div class="item-container3">
+                        <div class="bar-item2">
+                            <span class="greetings">Hi, Lyn Reyes!</span>
+                        </div>
+                        <div class="bar-photo">
+                            <img src = "usericon.png" width=32 height=28>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="header2-bar2">
+                    <div class="item-container2">
+                    <div class="bar-title">
+                        <span class ="bigtext">MY REPORTS</span>
+                    </div>
+                    <div class="search-container">
+                        <input type="text" class="search" placeholder="Search">
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="middle-container">
+                    <div class="top-color">.</div>
+                    <div class="title-reports">Types of Reports</div>
+                    <div class="options">
+                        <ul style="list-style-type:square">
+                            <a href="specificreport.html"><li>Grades of Students Per Assessment - NA</li></a>
+                            <a href="specificreport.html"><li>Grades of Students Per Assessment - APJ</li></a>
+                            <a href="specificreport.html"><li>Grades of Students Per Assessment - EMEA</li></a>
+                            <a href="specificreport.html"><li>Grades of Students Per Assessment - MEE</li></a>
+                            <a href="specificreport.html"><li>Top 5 Students with the Best Performance</li></a>
+                            <a href="specificreport.html"><li>Top 5 Students with the Worst Performance</li></a>
+                            <a href="specificreport.html"><li>Attendance of Students</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

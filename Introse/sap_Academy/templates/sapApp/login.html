@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'sapApp/login.css' %}">
+	<title></title>
+</head>
+
+
+<body>
+
+	<div id=maincontainer>
+	
+		<div id=logocontainer>
+            <a href="/sapApp/"><img src="{% static 'sapApp/Images/saplogo.png' %}" height="70" width="400" background-color="white"></a>
+		</div>
+
+		<div id="logincontainer"> 
+
+			<div class="blueblock">
+				<p align="center"><br>Academy Evaluation Portal</p>
+			</div>
+
+			<div id="userpass"> 
+				<br><br>
+				<span class="fontUP">&emsp;USERNAME</span>
+				<br>
+				&emsp;&emsp;<input type="text" class="username">
+				<br><br>
+				&emsp;<span class="fontUP">PASSWORD</span>
+				<br>
+				&emsp;&emsp;<input type="text" class="password">
+				<br>
+
+			</div>
+
+			<button type="button">Log In</button>
+
+		</div>
+
+
+	</div>
+
+
+</body>
+</html>
+
+

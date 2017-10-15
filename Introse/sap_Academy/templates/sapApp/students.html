@@ -1,0 +1,123 @@
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'sapApp/students.css' %}">
+        <title>List of Students</title>
+    </head>
+    <body>
+        <div class="webpage">
+            <div class="header">
+                <div class="header-bar1">
+                    <div class="item-container">
+                        <div class="bar-photo">
+                            <a href="/"><img src = "{% static 'sapApp/Images/saplogo.png' %}" width=65 height=32></a>
+                        </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/students/"><span class="item">STUDENTS</span></a>
+                        </div>
+                            </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/grades/"><span class="item">GRADES</span></a>
+                        </div>
+                        </div>
+                        <div class="bar-item-container">
+                        <div class="bar-item">
+                            <a href="/reports/"><span class="item">REPORTS</span></a>
+                        </div>
+                    </div>
+                        
+                    </div>
+                    <div class="item-container3">
+                        <div class="bar-item2">
+                            <span class="greetings">Hi, Lyn Reyes!</span>
+                        </div>
+                        <div class="bar-photo">
+                            <img src = "usericon.png" width=32 height=28>
+                        </div>
+                        
+                        <div class="bar-item">
+                            <a href="/sapApp/logout/"><span class="item">LOGOUT</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="header2-bar2">
+                    <div class="item-container2">
+                    <div class="bar-title">
+                        <span class ="bigtext">MY STUDENTS</span>
+                    </div>
+                    <div class="search-container">
+                        <input type="text" class="search" placeholder="Search">
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="middle">
+                <div id="sortcontainer">
+                    <span class ="sorttext">Sort By: </span>
+
+                    <select name="sortby" class="textbox2">
+                        <option value="Training_Program"> Training Program </option>
+                        <option value="Country">Country</option>    
+                        <option value="SAPID" selected> ID Number</option>  
+                        <option value="Territory"> Territory</option>  
+                        <option value="Manager">Manager</option>  
+                        <option value="Group">Group</option> 
+                    </select>
+                    
+                </div>
+                <div class="table-container">
+                    <div class="top-color">.</div>
+                    <div>
+
+                        <table>
+                            <tr>
+                                <th>Last Name</th>
+                                <th>First Name</th>
+                                <th>SAP ID #</th>
+                                <th>Email Address</th>
+                                <th>Group #</th>
+                                <th>Territory</th>
+                                <th>Country</th>
+                                <th>Manager</th>
+                            </tr>
+                            <tr>
+                                <td>Doe</td>
+                                <td>John</td>
+                                <td>123</td>
+                                <td>j.doe@gmail.com</td>
+                                <td>1</td>
+                                <td>APJ</td>
+                                <td>Philippines</td>
+                                <td>Lyn Reyes</td>
+
+                            </tr>
+                        {% if students_list %}
+                        {% for post in students_list %}
+
+                            <tr>
+                                <td>{{ students_list.last_name }}</td>
+                                <td>{{ students_list.first_name }}</td>
+                                <td>{{ students_list.sap_id }}</td>
+                                <td>{{ students_list.email_address }}</td>
+                                <td>{{ students_list.group_number }}</td>
+                                <td>{{ students_list.territory }}</td>
+                                <td>{{ students_list.country }}</td>
+                                <td>{{ students_list.employee_id }}</td>
+
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    {% endif %}
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>
