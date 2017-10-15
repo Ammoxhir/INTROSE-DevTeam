@@ -1,0 +1,140 @@
+<html>
+	<head>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'sapApp/userprofile.css' %}">
+        <title>Student's Information</title>
+    </head>
+    <body>
+        <div class="webpage">
+            <div class="header">
+                <div class = "left">
+                    
+                       <div class="bar-photo">
+                            <a href="/sapApp/dashboard/"><img src = "{% static 'sapApp/Images/saplogo.png' %}" width=65 height=32></a>
+                        </div>
+                        <div class="bar-item-container">
+                            <div class="bar-item">
+                                <a href="/sapApp/students/"><span class="item">STUDENTS</span></a>
+                            </div>
+                            </div>
+                        
+                    <div class="dropdown2">
+                                <span class="item" style="margin-left: 1.8em; cursor: pointer;">GRADES</span>
+                            <div class="dropdown-content2">
+                                <div class="inside2">
+                        <ul>
+                            <a href="/sapApp/grades/"><li>Asia Pacific Japan</li></a>
+                            <a href="/sapApp/grades/"><li>Europe Middle East</li></a>
+                            <a href="/sapApp/grades/"><li>Moscow East Europe</li></a>
+                            <a href="/sapApp/grades/"><li>North America</li></a>
+                        </ul>
+                                    </div>
+                    </div>
+                        </div>
+                    
+                    
+                    
+                    
+                        <div class="bar-item-container">
+                            <div class="bar-item">
+                                <a href="/sapApp/reports/"><span class="item">REPORTS</span></a>
+                            </div>
+                        
+                    </div>
+                </div>
+                <div class = "right">
+                    <div class="bar-item2">
+                            <span class="greetings">Hi, Lyn Reyes!</span>
+                        </div>
+                        <div class="dropdown">
+                            <img src = "{% static 'sapApp/Images/usericon.png' %}" width=32 height=28>
+                            <div class="dropdown-content">
+                                <div class="inside">
+                        <ul>
+                            <a href="/sapApp/userprofile/"><li>My Profile</li></a>
+                            <a href="/sapApp/signup/"><li>Create an Account</li></a>
+                            <a href="/sapApp/"><li>Log-out</li></a>
+                        </ul>
+                                    </div>
+                    </div>
+                        </div>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="header2-bar2">
+                    <div class="item-container2">
+                    <div class="bar-title">
+                        <span class ="bigtext">STUDENT'S INFORMATION</span>
+                    </div>
+                    <div class="search-container">
+                        <input type="text" class="search" placeholder="Search">
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                
+                    <div class="table-container">
+                        <div class="top-color">.</div>
+                        <div class="head"> Student's Name:</div> <div class="name"> John Doe</div>
+                        <div class="head2"> Territory:</div> <div class="territory"> API</div>
+                            <div class="grade-container">
+
+                                <table>
+                                    <tr>
+                                        <th>Last Name</th>
+                                        <td>{{currentStudent.last_name}}</td>
+                                            
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th>First Name</th>
+                                        <td>{{currentStudent.first_name}}</td>
+
+
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th>SAP ID #</th>
+                                        <td>{{currentStudent.sap_id}}</td>
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th>Email Address</th>
+                                        <td>{{currentStudent.email_address}}</td>
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th>Group #</th>
+                                        <td>{{currentStudent.group_number}}</td>
+
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th>Territory</th>
+                                        <td>{{currentStudent.territory}}</td>
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th>Country</th>
+                                        <td>{{currentStudent.country}}</td>
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th>Manager</th>
+                                        <td>Lyn Reyes</td>
+                                    </tr>
+                                    
+                            </table>
+                        </div>
+                    </div>
+                
+                
+            </div>
+        </div>
+    </body>
+</html>

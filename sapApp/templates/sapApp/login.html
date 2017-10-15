@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'sapApp/login.css' %}">
+	<title></title>
+</head>
+
+
+<body>
+
+	<div id=maincontainer>
+	
+		<div id=logocontainer>
+			<img src="{% static 'sapApp/Images/SAPlogin.png' %}" height="70" width="400" background-color="white">
+		</div>
+
+		<div id="logincontainer"> 
+			<form action="{% url 'sapApp:login' %}" method = "post">
+                {% csrf_token %}
+                <div class="blueblock">
+                    <p align="center"><br>Academy Evaluation Portal</p>
+                </div>
+                <div id="userpass"> 
+                    <br><br>
+                    <span class="fontUP">&emsp;EMPLOYEE ID</span> <!-- remove brute force &emsp -->
+                    <br>
+                    &emsp;&emsp;<input type="text" class="username"  name="userName">
+                    <br><br>
+                    &emsp;<span class="fontUP">PASSWORD</span>
+                    <br>
+                    &emsp;&emsp;<input type="password" class="password"  name="userPassword">
+                    <br>
+                </div>
+                <button type="submit">Log In</button>
+			</form>
+			</div>
+		</div>
+</body>
+</html>
+
+

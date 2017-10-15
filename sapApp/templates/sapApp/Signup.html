@@ -1,0 +1,92 @@
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'sapApp/Signup.css' %}">
+        <title>Sign Up</title>
+    </head>
+    <body>
+	 <div class="webpage">
+            <div class="header">
+                <div class = "left">
+                    
+                        <div class="bar-photo">
+                            <a href="/sapApp/dashboard/"><img src = "{% static 'sapApp/Images/saplogo.png' %}" width=65 height=32></a>
+                        </div>
+                        <div class="bar-item-container">
+                            <div class="bar-item">
+                                <a href="/sapApp/students2/"><span class="item">STUDENTS</span></a>
+                            </div>
+                            </div>
+                        
+                    <div class="dropdown2">
+                                <span class="item" style="margin-left: 1.8em; cursor: pointer;">GRADES</span>
+                            <div class="dropdown-content2">
+                                <div class="inside2">
+                        <ul>
+                            <a href="/sapApp/grades/"><li>Asia Pacific Japan</li></a>
+                            <a href="/sapApp/grades/"><li>Europe Middle East</li></a>
+                            <a href="/sapApp/grades/"><li>Moscow East Europe</li></a>
+                            <a href="/sapApp/grades/"><li>North America</li></a>
+                        </ul>
+                                    </div>
+                    </div>
+                        </div>
+                    
+                    
+                    
+                    
+                        <div class="bar-item-container">
+                            <div class="bar-item">
+                                <a href="/sapApp/reports/"><span class="item">REPORTS</span></a>
+                            </div>
+                        
+                    </div>
+                </div>
+                <div class = "right">
+                    <div class="bar-item2">
+                            <span class="greetings">Hi, Lyn Reyes!</span>
+                        </div>
+                        <div class="dropdown">
+                            <img src = "{% static 'sapApp/Images/usericon.png' %}" width=32 height=28>
+                            <div class="dropdown-content">
+                                <div class="inside">
+                        <ul>
+                            <a href="/sapApp/userprofile/"><li>My Profile</li></a>
+                            <a href="/sapApp/signup/"><li>Create an Account</li></a>
+                            <a href="/sapApp/"><li>Log-out</li></a>
+                        </ul>
+                                    </div>
+                    </div>
+                        </div>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="header2-bar2">
+                    <div class="item-container2">
+                    <div class="bar-title">
+                        <span class ="bigtext">Sign Up</span>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                
+                    <div class="table-container">
+                    <div class="top-color">.</div>
+                        <div class="head"> Create A User </div>
+                        <div class="head2">First Name:</div><input type="text" class="input2">
+                        <div class="head3">Last Name:</div><input type="text" class="input2">
+						<div class="head3">Middle Name:</div><input type="text" class="input2">
+                        <div class="head3">Position:</div><input type="text" class="input2">
+                        <div class="head3">Employee #:</div><input type="text" class="input2">
+                        <div class="head3">Password:</div><input type="text" class="input2">
+                        <div class="head3">Confirm Password:</div><input type="text" class="input2"><br>
+                        <button class="button1"> Submit</button>
+                </div>
+                
+                
+            </div>
+        </div>
+    </body>
+</html>
